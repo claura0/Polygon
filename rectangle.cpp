@@ -98,6 +98,31 @@ bool Rectangle::operator==(const Rectangle &r) const{
 
 }
 
+/// @brief print operator
+ostream & operator << (ostream &o, Rectangle &r)
+{
+
+    return o;
+}
+
+/// @brief input operator
+istream & operator >> (istream &i, Rectangle &r)
+{
+
+    return i;
+}
+
+/// @brief calculate rectangle area
+float Rectangle::Area() {
+    return width * length;
+}
+
+/// @brief calculate rectangle perimeter
+float Rectangle::Perimeter() {
+    return 2 * (width + length);
+}
+
+
 /// @brief set width of the object
 /// @param w width in pixels
 void Rectangle::SetWidth(float w) {
@@ -164,12 +189,12 @@ void Rectangle::Draw() {
 
 /// @brief get area of the object
 float Rectangle::GetArea() {
-    return width * length;
+    return Area();
 }
 
 /// @brief get perimeter of the object
 float Rectangle::GetPerimeter() {
-    return 2 * (width + length);
+    return Perimeter();
 }
 
 /// @brief debug

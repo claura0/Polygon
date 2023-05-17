@@ -4,21 +4,24 @@
 	Details.
 */
 
-
+#pragma once
 #ifndef ISOTRAPEZOID_H
 #define ISOTRAPEZOID_H
 
 #include <iostream>
+#include "polygon.h"
 using namespace std;
 
 /// @class IsoTrapezoid
 /// @brief to manage an object with the shape of an isotrapezoid
-class IsoTrapezoid {
-private:
+class IsoTrapezoid : public Polygon {
+protected:
 	float topside;
 	float bottomside;
     float height;
 
+    float Area();
+    float Perimeter();
     float Side();
 
 public:
@@ -32,21 +35,25 @@ public:
     ///Destructor
 	~IsoTrapezoid();
     ///Copy constructor
-    IsoTrapezoid(const IsoTrapezoid &i);
+    IsoTrapezoid(const IsoTrapezoid &t);
     /// @}
 
     /// @name OPERATORS
     /// @{
     ///Assignment overloading
-    IsoTrapezoid& operator=(const IsoTrapezoid &i);
+    IsoTrapezoid& operator=(const IsoTrapezoid &t);
     ///Comparison overloading
-    bool operator==(const IsoTrapezoid &i) const;
+    bool operator==(const IsoTrapezoid &t) const;
+    ///Print operator
+    friend ostream & operator << ( ostream & o, IsoTrapezoid &t);
+    ///Input operator
+    friend istream & operator >> ( istream & i, IsoTrapezoid &t);
     /// @}
 
     /// @name BASIC HANDLING
     /// @{
     void Init();
-    void Init(const IsoTrapezoid &i);
+    void Init(const IsoTrapezoid &t);
     void Reset();
     /// @}
 

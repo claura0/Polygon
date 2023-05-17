@@ -43,6 +43,19 @@ bool Polygon::operator==(const Polygon &r) {
 	return false;
 }
 
+/// @brief print operator
+ostream & operator << (ostream &o, Polygon &p)
+{
+
+    return o;
+}
+
+/// @brief input operator
+istream & operator >> (istream &i, Polygon &p)
+{
+
+    return i;
+}
 
 /// @brief default initialization of the object
 void Polygon::Init() {
@@ -86,6 +99,10 @@ float Polygon::GetPerimeter() {
 /// @brief draw the object
 void Polygon::Draw() {
     cout << "I'm drawing the polygon..." << endl;
+    cout << "Perimeter = " << GetPerimeter() << endl;
+    cout << "Area = " << GetArea() << endl;
+    cout << endl << flush;
+
 }
 
 /// @brief write an error message 
@@ -105,7 +122,6 @@ void Polygon::WarningMessage(const char *string) {
 	cout << string << endl;
 
 }
-
 
 /// @brief for debugging: all about the object
 void Polygon::Dump() {

@@ -96,17 +96,42 @@ bool Rhombus::operator==(const Rhombus &r) const{
 
 }
 
+/// @brief print operator
+ostream & operator << (ostream &o, Rhombus &r)
+{
+
+    return o;
+}
+
+/// @brief input operator
+istream & operator >> (istream &i, Rhombus &r)
+{
+
+    return i;
+}
+
 /// @brief calculate Rhombus side
 float Rhombus::Side() {
     return hypotf(diagonalH/2 ,diagonalV/2);
 }
 
-/// @brief set width of the object
-/// @param w width in pixels
-void Rhombus::SetWidth(float dH) {
+/// @brief calculate Rhombus area
+float Rhombus::Area() {
+    return (diagonalH * diagonalV) / 2;
+}
+
+/// @brief calculate Rhombus perimeter
+float Rhombus::Perimeter() {
+    float oneSide = Side();
+    return oneSide * 4;
+}
+
+/// @brief set horizontal diagonal of the object
+/// @param dH horizontal diagonal in pixels
+void Rhombus::SetDiagH(float dH) {
 
     if (dH < 0) {
-        cout << "WARNING: Rhombus - SetWidth: width should be > 0" << endl;
+        cout << "WARNING: Rhombus - SetDiagH: horizontal diagonal should be > 0" << endl;
         return;
     }
 
@@ -114,12 +139,12 @@ void Rhombus::SetWidth(float dH) {
 
 }
 
-/// @brief set length of the object
-/// @param dV length in pixels
-void Rhombus::SetLength(float dV) {
+/// @brief set vertical diagonal of the object
+/// @param dV vertical diagonal in pixels
+void Rhombus::SetDiagV(float dV) {
 
     if (dV < 0) {
-        cout << "WARNING: Rhombus - SetLength: length should be > 0" << endl;
+        cout << "WARNING: Rhombus - SetDiagV: vertical diagonal should be > 0" << endl;
         return;
     }
 
@@ -127,13 +152,13 @@ void Rhombus::SetLength(float dV) {
 
 }
 
-/// @brief set width and length of the object
-/// @param dH width in pixels
-/// @param dV length in pixels
+/// @brief set horizontal and vertical diagonal of the object
+/// @param dH horizontal diagonal in pixels
+/// @param dV vertical diagonal in pixels
 void Rhombus::SetDim(float dH, float dV) {
 
-    SetWidth(dH);
-    SetLength(dV);
+    SetDiagH(dH);
+    SetDiagV(dV);
 }
 
 
@@ -173,13 +198,12 @@ void Rhombus::Draw() {
 
 /// @brief get area of the object
 float Rhombus::GetArea() {
-    return (diagonalH * diagonalV) / 2;
+    return Area();
 }
 
 /// @brief get perimeter of the object
 float Rhombus::GetPerimeter() {
-    float oneSide = Side();
-    return oneSide * 4;
+    return Perimeter();
 }
 
 /// @brief debug

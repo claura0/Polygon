@@ -4,12 +4,11 @@
 	Details.
 */
 
-
+#pragma once
 #ifndef POLYGON_H
 #define POLYGON_H
 
 #include<iostream>
-
 using namespace std;
 
 /// @class Polygon
@@ -35,6 +34,9 @@ public:
 	/// @{
 	Polygon& operator=(const Polygon &p); 
 	bool operator==(const Polygon &p);
+    friend ostream & operator << ( ostream & o, Polygon &p);
+    friend istream & operator >> ( istream & i, Polygon &p);
+    /// @}
 	/// @}
 	
 	/// @name BASIC HANDLING

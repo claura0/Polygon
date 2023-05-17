@@ -4,21 +4,23 @@
 	Details.
 */
 
-
+#pragma once
 #ifndef RHOMBUS_H
 #define RHOMBUS_H
 
 #include <iostream>
+#include "polygon.h"
 using namespace std;
 
 /// @class Rhombus
 /// @brief to manage an object with the shape of a rhombus
-class Rhombus
-{
-private:
+class Rhombus : public Polygon {
+protected:
     float diagonalH;
     float diagonalV;
 
+    float Area();
+    float Perimeter();
     float Side();
 
 public:
@@ -41,6 +43,10 @@ public:
     Rhombus& operator=(const Rhombus &r);
     ///Comparison overloading
     bool operator==(const Rhombus &r) const;
+    ///Print operator
+    friend ostream & operator << ( ostream & o, Rhombus &r);
+    ///Input operator
+    friend istream & operator >> ( istream & i, Rhombus &r);
     /// @}
 
     /// @name BASIC HANDLING
@@ -53,8 +59,8 @@ public:
     /// ACCESS FUNCTIONS
     /// @{
     void SetDim(float dH, float dV);
-    void SetLength(float dH);
-    void SetWidth(float dV);
+    void SetDiagH(float dH);
+    void SetDiagV(float dV);
     /// @}
 
     void GetDim(float &dH, float &dV);

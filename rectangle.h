@@ -4,20 +4,23 @@
 	Details.
 */
 
-
+#pragma once
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
 #include <iostream>
+#include "polygon.h"
 using namespace std;
 
 /// @class Rectangle
 /// @brief to manage an object with the shape of a rectangle
-class Rectangle
-{
-private:
+class Rectangle : public Polygon {
+protected:
 	float length;
 	float width;
+
+    float Area();
+    float Perimeter();
 
 public:
 
@@ -39,6 +42,10 @@ public:
     Rectangle& operator=(const Rectangle &r);
     ///Comparison overloading
     bool operator==(const Rectangle &r) const;
+    ///Print operator
+    friend ostream & operator << ( ostream & o, Rectangle &r);
+    ///Input operator
+    friend istream & operator >> ( istream & i, Rectangle &r);
     /// @}
 
     /// @name BASIC HANDLING

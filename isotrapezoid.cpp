@@ -25,12 +25,12 @@ IsoTrapezoid::IsoTrapezoid(float tS, float bS, float h) {
     Init();
 	cout << "IsoTrapezoid - constructor" << endl;
 
-	if (tS <= 0 && tS == bS)
+	if (tS <= 0 || tS == bS)
 		cout << "WARNING: IsoTrapezoid - constructor: top side should be > 0 and different from bottom side" << endl;
 	else
 		topside = tS;
 
-	if (bS <= 0 && bS == tS)
+	if (bS <= 0 || bS == tS)
 		cout << "WARNING: IsoTrapezoid - constructor: bottom side should be > 0 and different from top side" << endl;
 	else
 		bottomside = bS;
@@ -52,9 +52,9 @@ IsoTrapezoid::~IsoTrapezoid() {
 
 /// @brief copy constructor
 /// @param reference to the object that should be copied
-IsoTrapezoid::IsoTrapezoid(const IsoTrapezoid &i){
+IsoTrapezoid::IsoTrapezoid(const IsoTrapezoid &t){
 
-    Init(i);
+    Init(t);
     cout << "IsoTrapezoid - copy constructor" << endl;
 
 }
@@ -68,12 +68,12 @@ void IsoTrapezoid::Init() {
 }
 
 /// @brief copy initializer
-/// @param i reference of the object that is copied
-void IsoTrapezoid::Init(const IsoTrapezoid &i) {
+/// @param t reference of the object that is copied
+void IsoTrapezoid::Init(const IsoTrapezoid &t) {
     Reset();
-    topside = i.topside;
-    bottomside = i.bottomside;
-    height = i.height;
+    topside = t.topside;
+    bottomside = t.bottomside;
+    height = t.height;
 }
 
 /// @brief object eraser
@@ -86,31 +86,54 @@ void IsoTrapezoid::Reset() {
 /// @brief overload of operator =
 /// @param reference to the object on the right side of the operator
 /// @return reference to the object on the left side of the operator
-IsoTrapezoid& IsoTrapezoid::operator=(const IsoTrapezoid &i) {
+IsoTrapezoid& IsoTrapezoid::operator=(const IsoTrapezoid &t) {
 
-    Init(i);
+    Init(t);
     cout << "IsoTrapezoid - operator =" << endl;
     return *this;
-
 }
 
 /// @brief overload of operator ==
 /// @param reference to the object on the right side of the operator
 /// @return reference to the object on the left side of the operator
-bool IsoTrapezoid::operator==(const IsoTrapezoid &i) const{
+bool IsoTrapezoid::operator==(const IsoTrapezoid &t) const{
 
     cout << "IsoTrapezoid - operator ==" << endl;
 
-    if (topside == i.topside && bottomside == i.bottomside && height == i.height)
+    if (topside == t.topside && bottomside == t.bottomside && height == t.height)
         return true;
 
     return false;
+}
 
+/// @brief print operator
+ostream & operator << (ostream &o, IsoTrapezoid &t)
+{
+
+    return o;
+}
+
+/// @brief input operator
+istream & operator >> (istream &i, IsoTrapezoid &t)
+{
+
+    return i;
 }
 
 /// @brief calculate isosceles trapezoid side
 float IsoTrapezoid::Side() {
     return hypotf(height ,(bottomside - topside)/2);
+}
+
+/// @brief calculate isosceles trapezoid area
+float IsoTrapezoid::Area() {
+    return ((topside + bottomside) * height)/2;
+}
+
+/// @brief calculate isosceles trapezoid perimeter
+float IsoTrapezoid::Perimeter() {
+    float side = Side();
+    return topside + bottomside + side * 2;
 }
 
 /// @brief set top side of the object
@@ -207,13 +230,12 @@ void IsoTrapezoid::Draw() {
 
 /// @brief get area of the object
 float IsoTrapezoid::GetArea() {
-    return ((topside + bottomside) * height)/2;
+    return Area();
 }
 
 /// @brief get perimeter of the object
-float IsoTrapezoid::GetPerimeter() {
-    float side = Side();
-    return topside + bottomside + side * 2;
+float IsoTrapezoid::GetPerimeter() {;
+    return Perimeter();
 }
 
 /// @brief debug
