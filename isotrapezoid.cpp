@@ -109,14 +109,21 @@ bool IsoTrapezoid::operator==(const IsoTrapezoid &t) const{
 /// @brief print operator
 ostream & operator << (ostream &o, IsoTrapezoid &t)
 {
-
+    o << "Top side:" << t.topside << endl;
+    o << "Bottom side:" << t.bottomside << endl;
+    o << "Height:" << t.height << endl;
     return o;
 }
 
 /// @brief input operator
 istream & operator >> (istream &i, IsoTrapezoid &t)
 {
-
+    cout << "Enter top side:" << endl;
+    i >> t.topside;
+    cout << "Enter bottom side:" << endl;
+    i >> t.bottomside;
+    cout << "Enter height:" << endl;
+    i >> t.height;
     return i;
 }
 
@@ -226,6 +233,7 @@ void IsoTrapezoid::Draw() {
     cout << "Side = " << GetSide() << endl;
     cout << "Area = " << GetPerimeter() << endl;
     cout << "Perimeter = " << GetArea() << endl;
+    cout << endl;
 }
 
 /// @brief get area of the object
@@ -248,6 +256,7 @@ void IsoTrapezoid::Dump() {
     cout << "Side = " << GetSide() << endl;
     cout << "Area = " << GetPerimeter() << endl;
     cout << "Perimeter = " << GetArea() << endl;
+    cout << endl;
 
 }
 

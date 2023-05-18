@@ -30,10 +30,8 @@ Polygon::~Polygon() {
 /// @brief overload of operator = 
 /// @param p reference to the object on the right side of the operator 
 /// @return reference to the object on the left side of the operator 
-Polygon& Polygon::operator=(const Polygon &p) { 
-
+Polygon& Polygon::operator=(const Polygon &p) {
 	return *this;
-	
 }
 
 /// @brief overload of operator == 
@@ -43,27 +41,12 @@ bool Polygon::operator==(const Polygon &r) {
 	return false;
 }
 
-/// @brief print operator
-ostream & operator << (ostream &o, Polygon &p)
-{
-
-    return o;
-}
-
-/// @brief input operator
-istream & operator >> (istream &i, Polygon &p)
-{
-
-    return i;
-}
-
 /// @brief default initialization of the object
 void Polygon::Init() {
 	Reset();
 	perimeter = 0.;
 	area = 0.;
 }
-
 
 /// @brief initialization of the object as a copy of an object 
 /// @param r reference to the object that should be copied 

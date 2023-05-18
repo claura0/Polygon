@@ -99,14 +99,18 @@ bool Rhombus::operator==(const Rhombus &r) const{
 /// @brief print operator
 ostream & operator << (ostream &o, Rhombus &r)
 {
-
+    o << "Horizontal diagonal:" << r.diagonalH << endl;
+    o << "Vertical diagonal:" << r.diagonalV << endl;
     return o;
 }
 
 /// @brief input operator
 istream & operator >> (istream &i, Rhombus &r)
 {
-
+    cout << "Enter horizontal diagonal:" << endl;
+    i >> r.diagonalH;
+    cout << "Enter vertical diagonal:" << endl;
+    i >> r.diagonalV;
     return i;
 }
 
@@ -193,6 +197,7 @@ void Rhombus::Draw() {
     cout << "Side = " << GetSide() << endl;
     cout << "Area = " << GetPerimeter() << endl;
     cout << "Perimeter = " << GetArea() << endl;
+    cout << endl;
 
 }
 
@@ -215,6 +220,7 @@ void Rhombus::Dump() {
     cout << "Side = " << GetSide() << endl;
     cout << "Area = " << GetPerimeter() << endl;
     cout << "Perimeter = " << GetArea() << endl;
+    cout << endl;
 }
 
 /// @brief write an error message

@@ -34,8 +34,6 @@ public:
 	/// @{
 	Polygon& operator=(const Polygon &p); 
 	bool operator==(const Polygon &p);
-    friend ostream & operator << ( ostream & o, Polygon &p);
-    friend istream & operator >> ( istream & i, Polygon &p);
     /// @}
 	/// @}
 	

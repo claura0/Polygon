@@ -101,14 +101,18 @@ bool Rectangle::operator==(const Rectangle &r) const{
 /// @brief print operator
 ostream & operator << (ostream &o, Rectangle &r)
 {
-
+    o << "Length:" << r.length << endl;
+    o << "Width:" << r.width << endl;
     return o;
 }
 
 /// @brief input operator
 istream & operator >> (istream &i, Rectangle &r)
 {
-
+    cout << "Enter length:" << endl;
+    i >> r.length;
+    cout << "Enter width:" << endl;
+    i >> r.width;
     return i;
 }
 
@@ -184,6 +188,7 @@ void Rectangle::Draw() {
     cout << "Length = " << GetLength() << endl;
     cout << "Area = " << GetPerimeter() << endl;
     cout << "Perimeter = " << GetArea() << endl;
+    cout << endl;
 
 }
 
@@ -205,6 +210,7 @@ void Rectangle::Dump() {
     cout << "Length = " << GetLength() << endl;
     cout << "Area = " << GetPerimeter() << endl;
     cout << "Perimeter = " << GetArea() << endl;
+    cout << endl;
 
 }
 
