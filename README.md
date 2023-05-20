@@ -8,11 +8,17 @@ The program is compiled using g++.
 
 ## How to Use
 After compiling the user can choose among these options:
+
 1 - Create a rectangle
+
 2 - Create a rhombus
+
 3 - Create an isosceles trapezoid
+
 4 - Draw
+
 5 - Exit
+
 By choosing 1-2-3, the user can proceed inputting information of the geometrical shape wanted (for example width).
 After creating shapes, the user can choose to draw the shapes or exit the program.
 
