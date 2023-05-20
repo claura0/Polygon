@@ -34,4 +34,4 @@ The program can draw up to 100 geometrical shapes. As soon as the user reaches t
 The data input (widths, lengths, diagonals, sides and heights) must be positive numbers.
 
 ## Author
-[Laura Cuono] https://github.com/claura0/Polygon
+Laura Cuono (https://github.com/claura0/Polygon)
