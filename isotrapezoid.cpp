@@ -231,8 +231,8 @@ void IsoTrapezoid::Draw() {
     cout << "Bottom Side = " << GetBottomSide() << endl;
     cout << "Height = " << GetHeight() << endl;
     cout << "Side = " << GetSide() << endl;
-    cout << "Area = " << GetPerimeter() << endl;
-    cout << "Perimeter = " << GetArea() << endl;
+    cout << "Area = " << GetArea() << endl;
+    cout << "Perimeter = " << GetPerimeter() << endl;
     cout << endl;
 }
 
@@ -254,8 +254,8 @@ void IsoTrapezoid::Dump() {
     cout << "Bottom Side = " << GetBottomSide() << endl;
     cout << "Height = " << GetHeight() << endl;
     cout << "Side = " << GetSide() << endl;
-    cout << "Area = " << GetPerimeter() << endl;
-    cout << "Perimeter = " << GetArea() << endl;
+    cout << "Area = " << GetArea() << endl;
+    cout << "Perimeter = " << GetPerimeter() << endl;
     cout << endl;
 
 }

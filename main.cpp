@@ -3,7 +3,7 @@
 #include "rectangle.h"
 #include "rhombus.h"
 
-#define MAX 2
+#define MAX 100
 
 int main() {
 
@@ -88,7 +88,7 @@ int main() {
 
             case 4: {
                 for (j = 0; j < MAX; j++) {
-                    mem[j] -> Draw();
+                    mem[j]->Draw();
                 }
                 break;
             }
@@ -115,7 +115,6 @@ int main() {
 
             switch (n) {
                 case 4: {
-                    cout << "Draw" << endl;
 
                     for (j = 0; j < MAX; j++) {
                         mem[j]->Draw();
@@ -138,5 +137,5 @@ int main() {
 
             }
     }
-    return 1;
+    return 0;
 }

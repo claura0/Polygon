@@ -195,8 +195,8 @@ void Rhombus::Draw() {
     cout << "Horizontal diagonal = " << GetDiagH() << endl;
     cout << "Vertical diagonal = " << GetDiagV() << endl;
     cout << "Side = " << GetSide() << endl;
-    cout << "Area = " << GetPerimeter() << endl;
-    cout << "Perimeter = " << GetArea() << endl;
+    cout << "Area = " << GetArea() << endl;
+    cout << "Perimeter = " << GetPerimeter() << endl;
     cout << endl;
 
 }
@@ -218,8 +218,8 @@ void Rhombus::Dump() {
     cout << "Horizontal diagonal = " << GetDiagH() << endl;
     cout << "Vertical diagonal = " << GetDiagV() << endl;
     cout << "Side = " << GetSide() << endl;
-    cout << "Area = " << GetPerimeter() << endl;
-    cout << "Perimeter = " << GetArea() << endl;
+    cout << "Area = " << GetArea() << endl;
+    cout << "Perimeter = " << GetPerimeter() << endl;
     cout << endl;
 }
 

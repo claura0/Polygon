@@ -186,8 +186,8 @@ void Rectangle::Draw() {
     cout << "I'm drawing the rectangle..." << endl;
     cout << "Width = " << GetWidth() << endl;
     cout << "Length = " << GetLength() << endl;
-    cout << "Area = " << GetPerimeter() << endl;
-    cout << "Perimeter = " << GetArea() << endl;
+    cout << "Area = " << GetArea() << endl;
+    cout << "Perimeter = " << GetPerimeter() << endl;
     cout << endl;
 
 }
@@ -208,8 +208,8 @@ void Rectangle::Dump() {
     cout << "RECTANGLE" << endl;
     cout << "Width = " << GetWidth() << endl;
     cout << "Length = " << GetLength() << endl;
-    cout << "Area = " << GetPerimeter() << endl;
-    cout << "Perimeter = " << GetArea() << endl;
+    cout << "Area = " << GetArea() << endl;
+    cout << "Perimeter = " << GetPerimeter() << endl;
     cout << endl;
 
 }
