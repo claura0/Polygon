@@ -1,8 +1,5 @@
 /// \file isotrapezoid.cpp
-///	\brief class IsoTrapezoid: implementation of the functions
-///
-///	Details.
-///
+///	\brief class IsoTrapezoid: implementation of the functions.
 
 #include <iostream>
 #include "isotrapezoid.h"

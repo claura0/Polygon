@@ -1,0 +1,47 @@
+\hypertarget{polygon_8h_source}{}\doxysection{polygon.\+h}
+\mbox{\hyperlink{polygon_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ POLYGON\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ POLYGON\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_polygon}{Polygon}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ perimeter;\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ area;}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ Area()=0;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ Perimeter()=0;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_polygon_ac183e712f8be1e13f1c9d5b4d4512ead}{Polygon}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_polygon_ac183e712f8be1e13f1c9d5b4d4512ead}{Polygon}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_polygon}{Polygon}}\ \&p);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_polygon_ace39c67107966db12e13a183f496c3b0}{\string~Polygon}}();}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_polygon}{Polygon}}\&\ \mbox{\hyperlink{class_polygon_afa6c4ee147650491a3685c645430b992}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_polygon}{Polygon}}\ \&p);\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_polygon_a0e7572ea3f662a652643bb275e115292}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_polygon}{Polygon}}\ \&p);}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_ae971a221f26793e00ee3055aaa5853b0}{Init}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_ae971a221f26793e00ee3055aaa5853b0}{Init}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_polygon}{Polygon}}\ \&r);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_a0049882c6d5d7fda0fed6f9bcb4271d2}{Reset}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_polygon_af63a6443688ab576e9f42fcd4e8f30d0}{GetArea}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_polygon_a7770bef071b4fe38cced3fd981e74af0}{GetPerimeter}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Draw()\ =\ 0;\ }
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_a702f6f4740487b93eb4ce5e6516f1876}{ErrorMessage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string});\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_aadfc52c992fe7459a9a4529de5f46a81}{WarningMessage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string});}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_a77413dafe2bc94e8950749c40365868a}{Dump}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

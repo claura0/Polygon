@@ -87,14 +87,14 @@ int main() {
             }
 
             case 4: {
-                for (j = 0; j < MAX; j++) {
+                for (j = 0; j < i; j++) {
                     mem[j]->Draw();
                 }
                 break;
             }
 
             case 5: {
-                for (j = 0; j < MAX; j++) {
+                for (j = 0; j < i; j++) {
                     mem[j]->~Polygon();
                 }
                 break;

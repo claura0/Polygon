@@ -1,8 +1,5 @@
 /// \file rectangle.cpp
 ///	\brief class Rectangle: implementation of the functions
-///
-///	Details.
-///
 
 #include <iostream>
 #include "rectangle.h"

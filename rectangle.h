@@ -1,7 +1,5 @@
 /*! \file rectangle.h
-	\brief Declaration of the class Rectangle
-
-	Details.
+	\brief Declaration of the class Rectangle.
 */
 
 #pragma once

@@ -1,7 +1,5 @@
 /*! \file isotrapezoid.h
 	\brief Declaration of the class IsoTrapezoid
-
-	Details.
 */
 
 #pragma once

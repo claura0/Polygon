@@ -1,0 +1,232 @@
+\hypertarget{class_polygon}{}\doxysection{Polygon Class Reference}
+\label{class_polygon}\index{Polygon@{Polygon}}
+
+
+an abstract base class for polygons  
+
+
+
+
+{\ttfamily \#include $<$polygon.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{Indent}\textbf{ CONSTRUCTORS/\+DESTRUCTOR}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_polygon_ac183e712f8be1e13f1c9d5b4d4512ead}\label{class_polygon_ac183e712f8be1e13f1c9d5b4d4512ead}} 
+{\bfseries Polygon} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_polygon_a342ca15271acbc437a0b1542118c025a}{Polygon}} (const \mbox{\hyperlink{class_polygon}{Polygon}} \&p)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygon_ace39c67107966db12e13a183f496c3b0}\label{class_polygon_ace39c67107966db12e13a183f496c3b0}} 
+virtual {\bfseries $\sim$\+Polygon} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ OPERATORS}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_polygon}{Polygon}} \& \mbox{\hyperlink{class_polygon_afa6c4ee147650491a3685c645430b992}{operator=}} (const \mbox{\hyperlink{class_polygon}{Polygon}} \&p)
+\begin{DoxyCompactList}\small\item\em overload of operator = \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_polygon_a0e7572ea3f662a652643bb275e115292}{operator==}} (const \mbox{\hyperlink{class_polygon}{Polygon}} \&p)
+\begin{DoxyCompactList}\small\item\em overload of operator == \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ BASIC HANDLING}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_polygon_ae971a221f26793e00ee3055aaa5853b0}\label{class_polygon_ae971a221f26793e00ee3055aaa5853b0}} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em default initialization of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_polygon_a19a11205b332be736c329275bb3b045d}{Init}} (const \mbox{\hyperlink{class_polygon}{Polygon}} \&r)
+\begin{DoxyCompactList}\small\item\em initialization of the object as a copy of an object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygon_a0049882c6d5d7fda0fed6f9bcb4271d2}\label{class_polygon_a0049882c6d5d7fda0fed6f9bcb4271d2}} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em total reset of the object ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ GETTERS}\par
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_polygon_af63a6443688ab576e9f42fcd4e8f30d0}{Get\+Area}} ()
+\begin{DoxyCompactList}\small\item\em get the area of the object \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_polygon_a7770bef071b4fe38cced3fd981e74af0}{Get\+Perimeter}} ()
+\begin{DoxyCompactList}\small\item\em get the perimeter of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ DRAWING}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_polygon_a7100c5f3a1e582007e1acc31c3519406}\label{class_polygon_a7100c5f3a1e582007e1acc31c3519406}} 
+virtual void {\bfseries Draw} ()=0
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ DEBUG and SERIALIZATION}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_polygon_a702f6f4740487b93eb4ce5e6516f1876}{Error\+Message}} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em write an error message \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_polygon_aadfc52c992fe7459a9a4529de5f46a81}{Warning\+Message}} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em write a warning message \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygon_a77413dafe2bc94e8950749c40365868a}\label{class_polygon_a77413dafe2bc94e8950749c40365868a}} 
+void {\bfseries Dump} ()
+\begin{DoxyCompactList}\small\item\em for debugging\+: all about the object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_polygon_a961203408efc953ac0db1bbae4046a34}\label{class_polygon_a961203408efc953ac0db1bbae4046a34}} 
+virtual float {\bfseries Area} ()=0
+\item 
+\mbox{\Hypertarget{class_polygon_afb476eead8e22f4eb5109b1e5edd5e98}\label{class_polygon_afb476eead8e22f4eb5109b1e5edd5e98}} 
+virtual float {\bfseries Perimeter} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_polygon_a24b5b13ce358b9bceb3c7d75fc38a469}\label{class_polygon_a24b5b13ce358b9bceb3c7d75fc38a469}} 
+float {\bfseries perimeter}
+\item 
+\mbox{\Hypertarget{class_polygon_aa30cff56b9b4b5617605326d539867b2}\label{class_polygon_aa30cff56b9b4b5617605326d539867b2}} 
+float {\bfseries area}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+an abstract base class for polygons 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_polygon_a342ca15271acbc437a0b1542118c025a}\label{class_polygon_a342ca15271acbc437a0b1542118c025a}} 
+\index{Polygon@{Polygon}!Polygon@{Polygon}}
+\index{Polygon@{Polygon}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{Polygon()}{Polygon()}}
+{\footnotesize\ttfamily Polygon\+::\+Polygon (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_polygon}{Polygon}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+copy constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & reference to the object that should be copied ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_polygon_a702f6f4740487b93eb4ce5e6516f1876}\label{class_polygon_a702f6f4740487b93eb4ce5e6516f1876}} 
+\index{Polygon@{Polygon}!ErrorMessage@{ErrorMessage}}
+\index{ErrorMessage@{ErrorMessage}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{ErrorMessage()}{ErrorMessage()}}
+{\footnotesize\ttfamily void Polygon\+::\+Error\+Message (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+
+write an error message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & message to be printed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_polygon_af63a6443688ab576e9f42fcd4e8f30d0}\label{class_polygon_af63a6443688ab576e9f42fcd4e8f30d0}} 
+\index{Polygon@{Polygon}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{GetArea()}{GetArea()}}
+{\footnotesize\ttfamily float Polygon\+::\+Get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the area of the object 
+
+\begin{DoxyReturn}{Returns}
+area ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_polygon_a7770bef071b4fe38cced3fd981e74af0}\label{class_polygon_a7770bef071b4fe38cced3fd981e74af0}} 
+\index{Polygon@{Polygon}!GetPerimeter@{GetPerimeter}}
+\index{GetPerimeter@{GetPerimeter}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{GetPerimeter()}{GetPerimeter()}}
+{\footnotesize\ttfamily float Polygon\+::\+Get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the perimeter of the object 
+
+\begin{DoxyReturn}{Returns}
+perimeter ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_polygon_a19a11205b332be736c329275bb3b045d}\label{class_polygon_a19a11205b332be736c329275bb3b045d}} 
+\index{Polygon@{Polygon}!Init@{Init}}
+\index{Init@{Init}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Polygon\+::\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_polygon}{Polygon}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+initialization of the object as a copy of an object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & reference to the object that should be copied ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_polygon_afa6c4ee147650491a3685c645430b992}\label{class_polygon_afa6c4ee147650491a3685c645430b992}} 
+\index{Polygon@{Polygon}!operator=@{operator=}}
+\index{operator=@{operator=}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_polygon}{Polygon}} \& Polygon\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_polygon}{Polygon}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+overload of operator = 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to the object on the right side of the operator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the object on the left side of the operator ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_polygon_a0e7572ea3f662a652643bb275e115292}\label{class_polygon_a0e7572ea3f662a652643bb275e115292}} 
+\index{Polygon@{Polygon}!operator==@{operator==}}
+\index{operator==@{operator==}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Polygon\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_polygon}{Polygon}} \&}]{r }\end{DoxyParamCaption})}
+
+
+
+overload of operator == 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & reference to the object on the right side of the operator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two objects have the same width and the same length ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_polygon_aadfc52c992fe7459a9a4529de5f46a81}\label{class_polygon_aadfc52c992fe7459a9a4529de5f46a81}} 
+\index{Polygon@{Polygon}!WarningMessage@{WarningMessage}}
+\index{WarningMessage@{WarningMessage}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{WarningMessage()}{WarningMessage()}}
+{\footnotesize\ttfamily void Polygon\+::\+Warning\+Message (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+
+write a warning message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & message to be printed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{polygon_8h}{polygon.\+h}}\item 
+polygon.\+cpp\end{DoxyCompactItemize}

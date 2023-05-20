@@ -1,7 +1,5 @@
 /*! \file rhombus.h
-	\brief Declaration of the class Rhombus
-
-	Details.
+	\brief Declaration of the class Rhombus.
 */
 
 #pragma once

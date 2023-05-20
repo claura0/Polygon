@@ -1,7 +1,5 @@
 /*! \file polygon.h
-	\brief Declaration of the general class Polygon
-
-	Details.
+	\brief Declaration of the general class Polygon.
 */
 
 #pragma once
