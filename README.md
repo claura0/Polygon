@@ -5,6 +5,17 @@ Polygon is designed to draw geometrical shapes which includes rectangle, rhombus
 
 ## Compiler
 The program is compiled using g++.
+To compile the file use this command in Polygon folder:
+
+```
+g++ -o test.exe main.cpp rectangle.cpp rhombus.cpp isotrapezoid.cpp polygon.cpp
+```
+
+To open test.exe:
+
+```
+./test.exe
+```
 
 ## How to Use
 After compiling the user can choose among these options:
