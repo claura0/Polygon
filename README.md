@@ -30,7 +30,8 @@ After creating shapes, the user can choose to draw the shapes or exit the progra
 
 ## Limitations
 The program can draw up to 100 geometrical shapes. As soon as the user reaches this limitation, the only choices left are "Draw" and "Exit".
+
 The data input (widths, lengths, diagonals, sides and heights) must be positive numbers.
 
-## License
---
+## Author
+[Laura Cuono] https://github.com/claura0/Polygon
